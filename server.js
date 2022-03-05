@@ -6,6 +6,12 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const cTable = require('console.table');
 
+const topLevelPrompts = require('./utils/topLevelPrompts');
+const addDepartment = require('./utils/addDepartment');
+const addEmployee = require('./utils/addEmployee');
+const addRole = require('./utils/addRole');
+
+
 // add Express.js middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
