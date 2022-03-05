@@ -1,8 +1,10 @@
 // required & start server
 const express = require('express');
 const mysql = require('mysql2');
+const inquirer = require('inquirer');
 const PORT = process.env.PORT || 3001;
 const app = express();
+const cTable = require('console.table');
 
 // add Express.js middleware
 app.use(express.urlencoded({ extended: false }));
