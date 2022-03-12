@@ -17,10 +17,6 @@ const db = mysql.createConnection (
         database: 'employees'
     });
 
-    // db.query(`SELECT * FROM employee`, (err, rows) => {
-    //     console.log(rows);
-    //   });
-
 // default response for any other (not found) request
 app.get('/api/employees', (req, res) => {
     const sql = `SELECT * FROM employees`;
