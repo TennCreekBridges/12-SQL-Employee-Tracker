@@ -5,7 +5,7 @@ const app = express();
 const mysql = require('mysql2');
 
 // add Express.js middleware
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // connect to mysql database

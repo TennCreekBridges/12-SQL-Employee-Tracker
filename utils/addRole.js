@@ -24,7 +24,7 @@ const addRole = async (departments) => {
                 if (isNaN(salary) === false) {
                     return true;
                 } else {
-                    console.log('Response must be a number. Please re-enter.'
+                    console.log('Response must be a number. Please re-enter.');
                     return false;
                 }
             },
