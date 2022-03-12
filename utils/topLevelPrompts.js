@@ -4,7 +4,7 @@ const topLevelPrompts = () => {
     return inquirer.prompt([
         {
             type: 'list',
-            name: 'top',
+            name: 'primary',
             choices: [
                 'View All Departments',
                 'View All Roles',
