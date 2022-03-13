@@ -2,7 +2,6 @@
 const express = require('express');
 const mysql = require('mysql2');
 const inquirer = require('inquirer');
-const figlet = require('figlet');
 const app = express();
 const cTable = require('console.table');
 
@@ -12,6 +11,8 @@ const topLevelPrompts = require('./utils/topLevelPrompts');
 const addDepartment = require('./utils/addDepartment');
 const addEmployee = require('./utils/addEmployee');
 const addRole = require('./utils/addRole');
+const updateRole = require('./utils/updateRole');
+const db = require('./db/server');
 const { 
     insertDepartment,
     insertRole,
@@ -54,7 +55,7 @@ const promptLoad = () => {
               })
               .then(promptLoad);
             break;
-          case 'Add A New Role':
+          case 'Add A Role':
             viewDepartment().then((departments) => {
               addRole(departments).then((role) => {
                 insertRole(role).then(promptLoad);
@@ -68,12 +69,12 @@ const promptLoad = () => {
               })
               .then(promptLoad);
             break;
-          case 'Add A New Department':
+          case 'Add A Department':
             addDepartment().then((department) => {
-              insertDepartment(department.dpt).then(promptLoad);
+              insertDepartment(department.department2).then(promptLoad);
             });
             break;
-          case 'Update Employee Role':
+          case 'Update An Employee Role':
             viewEmployee().then((employees) => {
               viewRole().then((roles) => {
                 updateRole(employees, roles).then((newEmployeeRole) => {
@@ -82,8 +83,8 @@ const promptLoad = () => {
               });
             });
             break;
-          case 'Quit':
-            console.log('Let\'\s go make some money!');
+          case 'Exit':
+            console.log('Let\'\s go make some money! Press CTRL-C to Exit.');
             break;
         }
       });

@@ -5,8 +5,8 @@ const mysql = require('mysql2');
 const insertDepartment = async (newDepartment) => {
   await db
     .promise()
-    .query(`INSERT INTO department (name) VALUES (?)`, newDepartment)
-    .then(console.log(`Added new department, ${newDepartment}`));
+    .query(`INSERT INTO department (department_name) VALUES (?)`, newDepartment)
+    .then(console.log(`New department, ${newDepartment}, added.`));
 };
 
 const insertRole = async ({ role, salary, whichDepartment }) => {
@@ -16,7 +16,7 @@ const insertRole = async ({ role, salary, whichDepartment }) => {
       `INSERT INTO role (title, salary, department_id)
       SELECT '${role}', ${salary}, id
       FROM department
-      WHERE name = '${whichDepartment}'`
+      WHERE department_name = '${whichDepartment}'`
     )
     .then(console.log(`Added new role, ${role}`));
 };
@@ -83,7 +83,7 @@ const viewRole = async () => {
   await db
     .promise()
     .query(
-      `SELECT role.*, department.name
+      `SELECT role.*, department.department_name
       AS department_id
       FROM role
       LEFT JOIN department

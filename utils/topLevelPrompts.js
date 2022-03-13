@@ -11,7 +11,7 @@ const topLevelPrompts = () => {
                 'View All Employees',
                 'Add A Department',
                 'Add A Role',
-                'Add An Employee',
+                'Add A New Employee',
                 'Update An Employee Role',
                 'Exit',
             ],

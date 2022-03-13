@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const db = require('../db/server');
 
 const addEmployee = async (roles, employees) => {
     employees = employees.map((x) => `${x.first_name} ${x.last_name}`);
