@@ -20,6 +20,7 @@ const {
     viewDepartment,
     viewRole,
     viewEmployee,
+    changeEmployee,
  } = require('./utils/dbQueries');
 
  console.log(`

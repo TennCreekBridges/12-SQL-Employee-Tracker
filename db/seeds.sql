@@ -18,8 +18,15 @@ VALUES
 
 INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
 VALUES
-    (13, 'Janet', 'Jackson', 5, 14),
-    (14, 'Boy', 'George', 6, 13),
-    (15, 'Neil', 'Diamond', 9, 17),
-    (16, 'Jackson', 'Browne', 11, 14),
-    (17, 'Paul', 'Simon', 8, 8);
+    (13, 'Janet', 'Jackson', 5, NULL),
+    (14, 'Boy', 'George', 6, NULL),
+    (15, 'Neil', 'Diamond', 9, NULL),
+    (16, 'Jackson', 'Browne', 11, NULL),
+    (17, 'Paul', 'Simon', 8, NULL);
+
+INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
+VALUES
+    (18, 'Paulie', 'Shore', 5, 14),
+    (19, 'George', 'Michael', 6, 13),
+    (20, 'Bruce', 'Springsteen', 9, 17),
+    (21, 'Carly', 'Simon', 11, 14),
