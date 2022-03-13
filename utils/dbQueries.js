@@ -5,8 +5,9 @@ const mysql = require('mysql2');
 const insertDepartment = async (newDepartment) => {
   await db
     .promise()
-    .query(`INSERT INTO department (department_name) VALUES (?)`, newDepartment)
-    .then(console.log(`New department, ${newDepartment}, added.`));
+    .query(
+      `INSERT INTO department (department_name) VALUES (?)`, newDepartment)
+    .then(console.log(`New department, ${newDepartment}, added. \n`));
 };
 
 const insertRole = async ({ role, salary, whichDepartment }) => {
@@ -18,7 +19,7 @@ const insertRole = async ({ role, salary, whichDepartment }) => {
       FROM department
       WHERE department_name = '${whichDepartment}'`
     )
-    .then(console.log(`Added new role, ${role}`));
+    .then(console.log(`Added new role, ${role}. \n`));
 };
 
 const insertEmployee = async (employee) => {
@@ -33,7 +34,7 @@ const insertEmployee = async (employee) => {
       db.promise()
         .query(
           `SELECT id FROM employee
-        WHERE first_name = '${employee.manager.split(' ')[0]}'`
+          WHERE first_name = '${employee.manager.split(' ')[0]}'`
         )
         .then((managerId) => {
           db.promise()
@@ -42,7 +43,7 @@ const insertEmployee = async (employee) => {
             )
             .then(
               console.log(
-                `Added new employee ${employee.firstName} ${employee.lastName}`
+                `Added employee ${employee.firstName} ${employee.lastName}. \n`
               )
             );
         });

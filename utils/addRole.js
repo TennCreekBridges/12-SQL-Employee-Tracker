@@ -11,7 +11,7 @@ const addRole = async (departments) => {
                 if (role) {
                     return true;
                 } else {
-                    console.log ('You must enter a role name.');
+                    console.log ('\n You must enter a role name.');
                     return false;
                 }
             },
@@ -24,20 +24,18 @@ const addRole = async (departments) => {
                 if (isNaN(salary) === false) {
                     return true;
                 } else {
-                    console.log('Response must be a number. Please re-enter.');
+                    console.log('\n Response must be a number. Please re-enter.');
                     return false;
                 }
             },
         },
         {
-            type: 'list',
+            type: 'input',
             name: 'whichDepartment',
             message: 'What department does this role fall under?',
-            choices: departments,
-        },
+         },
     ]);
-};
-
+  };
 console.log('Role added! What\'\s next? \n');
 
 
