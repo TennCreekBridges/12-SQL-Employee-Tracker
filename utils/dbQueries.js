@@ -1,12 +1,11 @@
-const cTable = require('console.table');
-const db = require('../db/server');
-const mysql = require('mysql2');
+const cTable = require("console.table");
+const db = require("../db/server");
+const mysql = require("mysql2");
 
 const insertDepartment = async (newDepartment) => {
   await db
     .promise()
-    .query(
-      `INSERT INTO department (department_name) VALUES (?)`, newDepartment)
+    .query(`INSERT INTO department (department_name) VALUES (?)`, newDepartment)
     .then(console.log(`New department, ${newDepartment}, added. \n`));
 };
 
@@ -34,7 +33,7 @@ const insertEmployee = async (employee) => {
       db.promise()
         .query(
           `SELECT id FROM employee
-          WHERE first_name = '${employee.manager.split(' ')[0]}'`
+          WHERE first_name = '${employee.manager.split(" ")[0]}'`
         )
         .then((managerId) => {
           db.promise()
@@ -98,7 +97,7 @@ const viewRole = async () => {
 };
 
 const changeEmployee = async ({ whichEmployee, whichRole }) => {
-  whichEmployee = whichEmployee.split(' ');
+  whichEmployee = whichEmployee.split(" ");
   const first = whichEmployee[0];
   const last = whichEmployee[1];
 
