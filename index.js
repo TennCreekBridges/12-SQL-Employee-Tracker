@@ -2,6 +2,7 @@
 const express = require('express');
 const mysql = require('mysql2');
 const inquirer = require('inquirer');
+const figlet = require('figlet');
 const app = express();
 const cTable = require('console.table');
 
@@ -19,6 +20,12 @@ const {
     viewRole,
     viewEmployee,
  } = require('./utils/dbQueries');
+
+ console.log(`
+ ╔═╗╔╦╗╔═╗╦  ╔═╗╦ ╦╔═╗╔═╗  ╔╦╗╔═╗╔╗╔╔═╗╔═╗╔═╗╦═╗
+ ║╣ ║║║╠═╝║  ║ ║╚╦╝║╣ ║╣   ║║║╠═╣║║║╠═╣║ ╦║╣ ╠╦╝
+ ╚═╝╩ ╩╩  ╩═╝╚═╝ ╩ ╚═╝╚═╝  ╩ ╩╩ ╩╝╚╝╩ ╩╚═╝╚═╝╩╚═
+  `);
 
 // begin prompts
 const promptLoad = () => {
