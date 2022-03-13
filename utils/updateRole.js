@@ -19,4 +19,7 @@ const updateRole = async (employees, roles) => {
   ]);
 };
 
+console.log('Employee role updated! What\'\s next? \n');
+
+
 module.exports = updateRole;

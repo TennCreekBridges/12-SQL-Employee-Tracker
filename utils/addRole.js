@@ -38,4 +38,7 @@ const addRole = async (departments) => {
     ]);
 };
 
+console.log('Role added! What\'\s next? \n');
+
+
 module.exports = addRole;

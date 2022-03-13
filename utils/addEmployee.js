@@ -47,5 +47,6 @@ const addEmployee = async (roles, employees) => {
         },
     ]);
 };
+console.log('Employee added! What\'\s next? \n');
 
 module.exports = addEmployee;
