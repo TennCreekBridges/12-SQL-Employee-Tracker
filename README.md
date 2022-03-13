@@ -8,7 +8,7 @@ This simple CLI allows the user to manage employees by being presented with seve
 * [License](#License)
 * [Questions](#questions)
 * [Technologies](#technologies)
-* [Screenshots](#screenshots)
+* [Screenshot](#screenshots)
 * [Walkthrough Video](#walkthrough)
 ## License 
 This project was developed under the GNU license.
@@ -23,8 +23,7 @@ You may direct any questions about the project to [TennCreekBridges](https://git
 This app was created using JavaScript, Express, Requirer, MYSQL2 and Console.table.
 
 <a name ="screenshots"></a>
-## Screenshots
-App in action:
+## Screenshot
 ![Screen Shot 2022-03-13 at 5 09 38 PM](https://user-images.githubusercontent.com/91682561/158081337-353d2056-c42e-4145-a773-3553e071df39.png)
 
 <a name ="walkthrough"></a>
