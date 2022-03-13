@@ -29,4 +29,4 @@ App in action:
 
 <a name ="walkthrough"></a>
 ## Walkthrough Video
-If you would like to view me blundering my way through this app, you may do so here: 
+If you would like to view me blundering my way through this app, you may do so here: https://www.screencast.com/t/qgT2ooxQg
