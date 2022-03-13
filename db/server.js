@@ -18,12 +18,11 @@ const db = mysql.createConnection(
         password: 'passpass',
         database: 'employees'
     },
-    console.log('Employee database connected.')
 );
 
 db.connect(err => {
     if (err) throw err;
-    console.log('Employee database connected, with ');
+    console.log('\n', '\n', 'Employee database connected, with ');
     app.listen(PORT, () => {
       console.log(`server running on port ${PORT}.`);
     });
